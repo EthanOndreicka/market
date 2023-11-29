@@ -1,0 +1,71 @@
+*{
+    font-family: 'Lato', sans-serif;
+    font-size: large;
+    color: white;
+}
+body{
+    background-color: #111111;
+}
+
+div{
+    display: inline-block;
+    
+}
+
+.cards {
+    width: 100%;
+    white-space: nowrap;
+    display: flex;
+    margin-bottom: 20px; /* Create space for the scrollbar */
+    overflow-x: scroll;
+}
+
+/* Style the scrollbar */
+.cards::-webkit-scrollbar {
+    height: 8px; /* Set the height of the scrollbar */
+    background-color: #f1f1f1; /* Change scrollbar background color */
+}
+
+.cards::-webkit-scrollbar-thumb {
+    background-color: #888; /* Change scrollbar thumb color */
+    border-radius: 4px; /* Round the scrollbar thumb */
+}
+
+.card-description{
+    width: 250px;
+}
+.each_card{
+    margin: 10;
+    margin-right: 15px;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    width: 110px;
+    padding-right: 205px;
+    flex: 0 0 auto;
+}
+
+.card_image{
+    height: 350px;
+    box-shadow: 0px 0px 121px 0px rgba(255,255,255,0.14);
+}
+
+.card_set_image{
+    height: 30px;
+    width: 30px;
+}
+
+.left-of-card{
+    float: left;
+    margin: 0;
+    padding-left: 10px;
+    line-height: 0.2;
+}
+
+.right-of-card{
+    float: right;
+    padding-right: 10px;
+    line-height: 0.2;
+}
+
+/* Look at class='card-description' to figure out how to do this properly */
