@@ -17,7 +17,7 @@ div{
     white-space: nowrap;
     display: flex;
     margin-bottom: 20px; /* Create space for the scrollbar */
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 /* Style the scrollbar */
