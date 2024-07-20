@@ -1,71 +1,94 @@
-*{
+* {
     font-family: 'Lato', sans-serif;
     font-size: large;
     color: white;
 }
-body{
+
+body {
     background-color: #111111;
+    margin: 0;
+    padding: 0;
 }
 
-div{
-    display: inline-block;
-    
+.scroll-container {
+    background-color: #1e1d1d;
+    border-radius: 10px;
+    padding-top: 30px;
+}
+
+.categories{
+    font-weight: 800;
+    padding-left: 10px;
 }
 
 .cards {
     width: 100%;
     white-space: nowrap;
     display: flex;
-    margin-bottom: 20px; /* Create space for the scrollbar */
     overflow-x: auto;
+    padding: 10px;
 }
 
 /* Style the scrollbar */
 .cards::-webkit-scrollbar {
     height: 8px; /* Set the height of the scrollbar */
-    background-color: #f1f1f1; /* Change scrollbar background color */
+    background-color: #111111; /* Change scrollbar background color */
 }
 
 .cards::-webkit-scrollbar-thumb {
-    background-color: #888; /* Change scrollbar thumb color */
+    background-color: #565656; /* Change scrollbar thumb color */
     border-radius: 4px; /* Round the scrollbar thumb */
 }
 
-.card-description{
-    width: 250px;
-}
-.each_card{
-    margin: 10;
-    margin-right: 15px;
+.each_card {
+    margin: 10px;
     padding: 0;
     border: 0;
     vertical-align: baseline;
-    width: 110px;
-    padding-right: 205px;
+    width: 250px; /* Updated width to fit content */
     flex: 0 0 auto;
+    
+    border-radius: 8px; /* Optional: Add rounded corners */
 }
 
-.card_image{
-    height: 350px;
-    box-shadow: 0px 0px 121px 0px rgba(255,255,255,0.14);
+.card_image {
+    width: 100%; /* Ensure the image fits the card width */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0px 0px 121px 0px rgba(255, 255, 255, 0.14);
+    border-top-left-radius: 8px; /* Match the border radius of the card */
+    border-top-right-radius: 8px; /* Match the border radius of the card */
 }
 
-.card_set_image{
+.card-description {
+    padding: 10px;
+    
+    border-bottom-left-radius: 8px; /* Match the border radius of the card */
+    border-bottom-right-radius: 8px; /* Match the border radius of the card */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-of-card, .right-of-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-of-card {
+    text-align: left;
+}
+
+.right-of-card {
+    text-align: right;
+}
+
+.card_name, .card_set, .card_rarity, .card_price {
+    margin: 2px 0; /* Add margin for spacing between elements */
+}
+
+.card_set_image {
     height: 30px;
     width: 30px;
-}
-
-.left-of-card{
-    float: left;
-    margin: 0;
     padding-left: 10px;
-    line-height: 0.2;
 }
-
-.right-of-card{
-    float: right;
-    padding-right: 10px;
-    line-height: 0.2;
-}
-
-/* Look at class='card-description' to figure out how to do this properly */
